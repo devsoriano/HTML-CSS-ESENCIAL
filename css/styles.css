@@ -80,3 +80,20 @@ h3 {
   font-size: 1.5em;
   /*font-size: 24px;*/
 }
+
+pre {
+  background: #fec62e;
+}
+
+.hero {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
+    url("../images/patron.png");
+  /*background-repeat: no-repeat;*/
+  /*background-position: left 50px bottom -50px;*/
+  /*background-size: cover;*/
+  height: 350px;
+}
