@@ -1,61 +1,38 @@
-@font-face {
-  font-family: charter;
-  src: url("../fonts/charter-regular.otf");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: charter;
-  src: url("../fonts/charter-italic.otf");
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: charter;
-  src: url("../fonts/charter-bold.otf");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: charter;
-  src: url("../fonts/charter-bold-italic.otf");
-  font-style: italic;
-  font-weight: bold;
-}
-
 :root {
   font-size: 18px;
-  --gray30: #212121;
-  --gray20: #212429;
-  --gray10: #616161;
+  --white30: white;
+  --white20: #a5a3a5;
+  --white10: #3a3539;
 }
 
 body {
-  color: var(--gray30);
-  font-family: "Roboto", sans-serif;
+  color: var(--white30);
+  font-family: "Nunito", sans-serif;
+  background: #251f24;
   /*font-family: charter;*/
 }
 
 a {
-  color: var(--gray30);
+  color: var(--white30);
 }
 
 header {
-  /*--gray10: red;*/
+  /*--white10: red;*/
   font-size: 14px;
-  color: var(--gray10);
+  color: var(--white30);
+}
+
+header li {
+  color: var(--white20);
 }
 
 header a {
-  color: var(--gray10);
+  color: var(--white20);
   text-decoration: none;
 }
 
 header a:hover {
-  color: var(--gray30);
+  color: var(--white30);
 }
 
 nav details summary {
@@ -65,6 +42,12 @@ nav details summary {
 /*ol li:nth-child(even) {
   border: 1px solid red;
 }*/
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
 
 h1 {
   font-size: 60px;
@@ -82,16 +65,21 @@ h3 {
 }
 
 pre {
-  background: #fec62e;
+  background: var(--white10);
+}
+
+p {
+  color: var(--white20);
 }
 
 .hero {
-  background-image: linear-gradient(
+  background-image: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
+  /*background-image: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.3),
       transparent
     ),
-    url("../images/patron.png");
+    url("../images/patron.png");*/
   /*background-repeat: no-repeat;*/
   /*background-position: left 50px bottom -50px;*/
   /*background-size: cover;*/
@@ -114,7 +102,7 @@ pre {
   content: "";
   width: 32px;
   height: 4px;
-  background: var(--gray30);
+  background: var(--white30);
   display: inline-block;
 }
 
