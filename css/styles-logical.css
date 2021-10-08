@@ -9,6 +9,12 @@ body {
   color: var(--white30);
   font-family: "Nunito", sans-serif;
   background: #251f24;
+  margin: 0;
+  /*writing-mode: vertical-lr;*/
+  /*margin-inline: 100px;*/ /*margin: 0 100px*/
+  /*margin-block: 100px;*/ /*margin: 100px 0*/
+  /*margin-block-start: 50px;*/ /*margin-top: 50px*/
+  /*margin-block-end: 50px;*/ /*margin-bottom: 50px*/
   /*font-family: charter;*/
 }
 
@@ -51,17 +57,27 @@ h3 {
 
 h1 {
   font-size: 60px;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
   /*font-size: 3.75em;*/
 }
 
 h2 {
   font-size: 2em;
+  margin-block: 40px;
   /*font-size: 32px;*/
 }
 
 h3 {
   font-size: 1.5em;
+  font-weight: 600;
+  margin-block: 16px;
   /*font-size: 24px;*/
+}
+
+hr {
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2);
 }
 
 pre {
@@ -86,6 +102,16 @@ p {
   height: 350px;
 }
 
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
+  max-inline-size: 100%; /*max-width: 100%*/
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
 .section-content h3 {
   counter-increment: titleList;
 }
@@ -95,7 +121,7 @@ p {
 }*/
 
 .section-content h3::before {
-  content: counter(titleList, decimal) /*"-"*/;
+  content: counter(titleList, decimal) ". " /*"-"*/;
 }
 
 .section-content h3::after {
@@ -106,6 +132,34 @@ p {
   display: inline-block;
 }
 
+blockquote {
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background-color: var(--white10);
+  border-radius: 8px;
+}
+
 /*::selection {
   background: red;
 }*/
+
+.main hr {
+  display: none;
+}
+
+.main {
+  /*border: 1px solid red;*/
+}
+
+.wrapper {
+  /*border: 1px solid yellow;*/
+  /*block-size: 100px;*/
+  /*overflow: auto; */ /*scroll*/
+  /*inline-size: 902px;*/ /*width: ;*/
+  max-inline-size: 902px; /*max-width: ;*/
+  margin: auto;
+}
+
+.main-content {
+  /*border: 1px solid blue;*/
+}
