@@ -82,6 +82,18 @@ hr {
 
 pre {
   background: var(--white10);
+  padding: 40px;
+  overflow: auto;
+  border-radius: 8px;
+  /*border: 10px solid red;
+  border-inline-start: 5px solid white; /*border-left: 5px solid blue;*/
+  /*border-inline-end: 5px solid green;
+  border-block-end: 20px solid pink;
+  border-block-start-color: blue;*/
+  border: 10px solid #5551ff;
+  box-shadow: -10px 10px 0 0 #abaaf6;
+  margin-block-end: 30px;
+  /*border-start-start-radius: 60px;*/
 }
 
 p {
@@ -116,27 +128,33 @@ p {
   counter-increment: titleList;
 }
 
-/*.section-content h3 {
-  counter-reset: titleList;
-}*/
-
 .section-content h3::before {
   content: counter(titleList, decimal) ". " /*"-"*/;
 }
 
-.section-content h3::after {
+/*.section-content h3::after {
   content: "";
   width: 32px;
   height: 4px;
   background: var(--white30);
   display: inline-block;
-}
+}*/
 
 blockquote {
   margin-block-start: 80px;
   margin-block-end: 63px;
   background-color: var(--white10);
+  line-height: 32px;
+  font-size: 24px;
   border-radius: 8px;
+  padding-inline-end: 24px;
+  padding-inline-start: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+}
+
+blockquote p {
+  color: var(--white30);
 }
 
 /*::selection {
@@ -162,4 +180,5 @@ blockquote {
 
 .main-content {
   /*border: 1px solid blue;*/
+  padding-inline: 16px;
 }
