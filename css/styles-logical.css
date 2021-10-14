@@ -38,6 +38,34 @@ header {
   color: var(--white30);
 }
 
+header nav:first-child {
+  margin-block-end: 112px;
+}
+
+header nav:first-child ul li {
+  margin-block-end: 0px;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  padding: 8px;
+}
+
+header ul li.selected {
+  background-color: black;
+}
+
+header ul li.selected a {
+  color: white;
+}
+
+header .nav-variants ul {
+  padding-inline-start: 0;
+}
+
 header li {
   color: var(--white20);
   margin-block-end: 16px;
@@ -273,6 +301,14 @@ blockquote p {
     inset-block-start: 0;
     inset-inline-start: -208px;
     inline-size: 188px;
+  }
+
+  header nav h2 {
+    margin-block-end: 24px;
+    margin-block-start: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
   }
 
   .hero {
