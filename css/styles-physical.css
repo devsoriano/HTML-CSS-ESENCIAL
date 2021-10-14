@@ -193,8 +193,6 @@ blockquote span::before {
 
 .section-content h3 {
   counter-increment: titleList;
-  /*background: red;*/
-  padding-bottom: 8px;
 }
 
 .section-content h3::before {
