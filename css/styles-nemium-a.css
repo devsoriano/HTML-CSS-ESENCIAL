@@ -128,7 +128,7 @@ pre {
   background: #fec62e;
   padding: 40px;
   overflow: auto;
-  margin-block-end: 0;
+  margin-block-end: 16px;
 }
 
 p {
@@ -151,8 +151,14 @@ p {
   max-inline-size: 100%; /*max-width: 100%*/
 }
 
-.section-content img.poster {
-  margin-block: 0;
+.section-content img#poster-1 {
+  margin-block-start: 0;
+  margin-block-end: 24px;
+}
+
+.section-content img#poster-2 {
+  margin-block-start: 0;
+  margin-block-end: 116px;
 }
 
 .section-content {
@@ -173,7 +179,7 @@ p {
 
 .section-content h3 {
   counter-increment: titleList;
-  margin-block-start: 40px;
+  margin-block-start: 24px;
   margin-block-end: 0px;
   display: inline-block;
 }
