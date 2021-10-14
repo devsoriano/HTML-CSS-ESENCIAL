@@ -284,9 +284,42 @@ blockquote p {
   color: var(--white20);
 }
 
+footer {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p.copyright {
+  font-size: 24px;
+  color: #251f24;
+  margin-block-start: 42px;
+  margin-block-end: 8px;
+}
+
+footer .social-networks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 34px;
+  margin-block-start: 0;
+}
+
+footer .social-networks img {
+  margin: 11px;
+}
+
 @media screen and (min-width: 1366px) {
   .header {
-    position: sticky;
+    position: inherit /*sticky*/;
     inset-block-start: -45px;
   }
 
@@ -318,5 +351,9 @@ blockquote p {
   h1 {
     font-size: 60px;
     margin-block-start: 64px;
+  }
+
+  p.copyright {
+    font-size: 32px;
   }
 }
