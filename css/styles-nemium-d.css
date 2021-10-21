@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  color: var(--gray30);
-  font-family: "Roboto", sans-serif;
+  color: var(--white30);
+  font-family: "Nunito", sans-serif;
   background: white;
   margin: 0;
   /*writing-mode: vertical-lr;*/
@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  color: var(--gray30);
+  color: var(--white30);
 }
 
 .header {
@@ -39,7 +39,7 @@ a {
 header {
   margin-block-start: 20px;
   font-size: 14px;
-  color: var(--gray30);
+  color: var(--white30);
 }
 
 header nav:first-child {
@@ -71,17 +71,17 @@ header .nav-variants ul {
 }
 
 header li {
-  color: var(--gray20);
+  color: var(--white20);
   margin-block-end: 16px;
 }
 
 header a {
-  color: var(--gray20);
+  color: var(--white20);
   text-decoration: none;
 }
 
 header a:hover {
-  color: var(--gray30);
+  color: var(--white30);
 }
 
 nav details summary {
@@ -109,59 +109,81 @@ h1 {
 
 h2 {
   font-size: 2em;
-  margin-block-start: 64px;
-  margin-block-end: 40px;
-  font-weight: normal;
+  margin-block: 40px;
   /*font-size: 32px;*/
 }
 
 h3 {
   font-size: 1.5em;
-  font-weight: normal;
   margin-block: 16px;
   /*font-size: 24px;*/
 }
 
 hr {
-  margin-block: 40px;
+  margin-block: 64px;
   border-color: rgba(97, 97, 97, 0.2);
 }
 
 pre {
   background: #fec62e;
   padding: 40px;
-  font-family: "Roboto";
-  line-height: 24px;
+  overflow: auto;
+  margin-block-end: 16px;
 }
 
 p {
-  color: var(--gray20);
+  color: var(--white20);
 }
 
 .hero {
-  background-image: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.3),
-      transparent
-    ),
-    url("./../images/patron.png");
-  block-size: 50px;
+  background: linear-gradient(274deg, #4a00e099 5%, #8e2de280 130%),
+    url("./../images/patron-2.png");
+  inline-size: 100%;
+  max-inline-size: 100%;
+  block-size: 101px;
 }
 
 .section-content img {
-  margin-block-start: 40px;
-  margin-block-end: 1em;
+  /*margin-block-start: 40px;*/
   display: block;
   max-inline-size: 100%; /*max-width: 100%*/
+}
+
+.section-content img#poster-1 {
+  margin-block-start: 0;
+  margin-block-end: 24px;
+}
+
+.section-content img#poster-2 {
+  margin-block-start: 0;
+  margin-block-end: 116px;
 }
 
 .section-content {
   counter-reset: titleList;
 }
 
+.section-content img.logo {
+  margin-block-start: 40px;
+  margin-block-end: 16px;
+}
+
+.section-content h3#google-chrome,
+.section-content h3#vsc,
+.section-content h3#figma,
+.section-content h3#github {
+  margin-block: 0;
+}
+
 .section-content h3 {
   counter-increment: titleList;
+  margin-block-start: 24px;
+  margin-block-end: 0px;
   display: inline-block;
+}
+
+.section-content h3.initial {
+  margin-block-start: 0px;
 }
 
 .section-content h3::before {
@@ -177,29 +199,25 @@ p {
 }
 
 blockquote {
+  margin-block-start: 32px;
+  margin-block-end: 63px;
+  background-color: var(--white10);
   font-size: 24px;
-  margin: 32px 0;
-  padding-left: 16px;
-  line-height: 24px;
-  /*border: 10px solid red;*/
-  /*border-top: 10px solid pink;*/
   border-left: 4px solid var(--gray30);
+  padding-inline-start: 16px;
 }
 
-blockquote span {
-  color: var(--gray10);
-}
-
-blockquote span::before {
-  content: "-";
+blockquote p {
+  color: var(--white30);
 }
 
 /*::selection {
   background: red;
 }*/
 
-.main hr {
-}
+/*.main hr {
+  display: none;
+}*/
 
 .main {
   /*border: 1px solid red;*/
@@ -217,10 +235,6 @@ blockquote span::before {
 .main-content {
   /*border: 1px solid blue;*/
   padding-inline: 16px;
-}
-
-p.description {
-  margin-block-end: 64px;
 }
 
 .slider {
@@ -260,27 +274,70 @@ p.description {
   border-radius: 50%;
 }
 
-.form input {
-  inline-size: 100%;
-  border: 1px solid var(--gray30);
-  background: #251f24;
+.section-formulario-contacto h3 {
+  font-weight: 400;
+  /* font-size: 1.5rem; */
+  font-size: 24px;
+
+  line-height: 32px;
+
+  margin-block: 40px 16px;
+}
+
+input {
   box-sizing: border-box;
-  border-radius: 8px;
-  padding-inline: 16px;
-  padding-block: 12px;
-  color: var(--gray30);
-  font-size: 16px;
   display: block;
-  margin-block-end: 24px;
+  /* width: 100%; */
+  inline-size: 100%;
+  /* height: 1.3rem; */
+  block-size: 3rem;
+  margin-block: 1rem 1.5rem;
+  background-color: transparent;
+  border: 1px #424242 solid;
+  border-radius: 8px;
+  padding-inline-start: 1rem;
+  padding-block: 0.4rem;
+  color: var(--gris40);
+  font-size: 1rem;
+  border-radius: 90px;
+}
+input::placeholder {
+  color: #424242;
+  margin-inline-start: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
 }
 
-.form input[type="submit"] {
-  background: #157efb;
-  border: none;
+.section-formulario-contacto button {
+  background-color: #000000;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  padding-block: 12px;
+  padding-inline: 0.75rem;
+  max-inline-size: 40%;
+  border-radius: 90px;
+  position: absolute;
+  inset-block-end: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  border-color: #000000;
+  cursor: pointer;
+}
+.buttom-content {
+  margin-block: 1rem 1.5rem;
+  position: relative;
+}
+.section-formulario-contacto .buttom-content input {
+  margin-block: 0;
+  inline-size: 100%;
 }
 
-.from input::-webkit-input-placeholder {
-  color: var(--gray20);
+.section-formulario-contacto h3::before {
+  counter-reset: none;
+  content: none;
 }
 
 footer {
@@ -292,14 +349,14 @@ footer {
   align-items: center;
 }
 
-p.copyright {
+footer p.copyright {
   font-size: 24px;
   color: white;
   margin-block-start: 42px;
   margin-block-end: 8px;
 }
 
-footer .social-networks {
+footer p.social-networks {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,5 +406,35 @@ footer .social-networks img {
 
   p.copyright {
     font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section-formulario-contacto button {
+    inline-size: 90%;
+    /* margin-inline: 4%; */
+
+    max-inline-size: initial;
+    position: initial;
+    margin-block-start: 16px;
+    margin-inline: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-formulario-contacto input[name="nombre"],
+  .buttom-content {
+    display: inline-block;
+    inline-size: 47%;
+  }
+  .buttom-content {
+    margin-inline-start: 3%;
+  }
+  .buttom-content input[type="email"] {
+    inline-size: 90%;
+  }
+
+  footer {
+    margin-block-start: 100px;
   }
 }
