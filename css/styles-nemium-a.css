@@ -276,27 +276,70 @@ blockquote p {
   border-radius: 50%;
 }
 
-.form input {
-  inline-size: 100%;
-  border: 1px solid var(--white30);
-  background: #251f24;
+.section-formulario-contacto h3 {
+  font-weight: 400;
+  /* font-size: 1.5rem; */
+  font-size: 24px;
+
+  line-height: 32px;
+
+  margin-block: 40px 16px;
+}
+
+input {
   box-sizing: border-box;
-  border-radius: 8px;
-  padding-inline: 16px;
-  padding-block: 12px;
-  color: var(--white30);
-  font-size: 16px;
   display: block;
-  margin-block-end: 24px;
+  /* width: 100%; */
+  inline-size: 100%;
+  /* height: 1.3rem; */
+  block-size: 3rem;
+  margin-block: 1rem 1.5rem;
+  background-color: transparent;
+  border: 1px #424242 solid;
+  border-radius: 8px;
+  padding-inline-start: 1rem;
+  padding-block: 0.4rem;
+  color: var(--gris40);
+  font-size: 1rem;
+  border-radius: 90px;
+}
+input::placeholder {
+  color: #424242;
+  margin-inline-start: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
 }
 
-.form input[type="submit"] {
-  background: #157efb;
-  border: none;
+.section-formulario-contacto button {
+  background-color: #000000;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  padding-block: 12px;
+  padding-inline: 0.75rem;
+  max-inline-size: 40%;
+  border-radius: 90px;
+  position: absolute;
+  inset-block-end: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  border-color: #000000;
+  cursor: pointer;
+}
+.buttom-content {
+  margin-block: 1rem 1.5rem;
+  position: relative;
+}
+.section-formulario-contacto .buttom-content input {
+  margin-block: 0;
+  inline-size: 100%;
 }
 
-.from input::-webkit-input-placeholder {
-  color: var(--white20);
+.section-formulario-contacto h3::before {
+  counter-reset: none;
+  content: none;
 }
 
 footer {
@@ -365,5 +408,35 @@ footer .social-networks img {
 
   p.copyright {
     font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section-formulario-contacto button {
+    inline-size: 90%;
+    /* margin-inline: 4%; */
+
+    max-inline-size: initial;
+    position: initial;
+    margin-block-start: 16px;
+    margin-inline: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-formulario-contacto input[name="nombre"],
+  .buttom-content {
+    display: inline-block;
+    inline-size: 47%;
+  }
+  .buttom-content {
+    margin-inline-start: 3%;
+  }
+  .buttom-content input[type="email"] {
+    inline-size: 90%;
+  }
+
+  footer {
+    margin-block-start: 100px;
   }
 }
